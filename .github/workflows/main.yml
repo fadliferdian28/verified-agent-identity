@@ -4,13 +4,13 @@ on:
 workflow_dispatch:
 inputs:
 agent_name:
-description: 'aliselalujp'
+description: aliselalujp
 required: true
-default: 'aliselalujp'
+default: aliselalujp
 agent_description:
-description: 'aliselalujp'
+description: aliselalujp
 required: true
-default: 'aliselalujp AI Agent'
+default: aliselalujp AI Agent
 
 jobs:
 verify:
@@ -24,16 +24,8 @@ steps:
   - name: Setup Node.js
     uses: actions/setup-node@v3
     with:
-      node-version: '20'
+      node-version: 20
 
   - name: Step 1 - Install ClawHub skill
     run: npx clawhub@latest install verified-agent-identity
-
-  - name: Install script dependencies
-    run: |
-      cd scripts
-      npm install
-
-  - name: Step 2 - Create new Ethereum Identity
-    run: node s
 ```
