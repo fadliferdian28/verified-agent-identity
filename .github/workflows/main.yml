@@ -2,19 +2,19 @@ name: Verify Human Identity
 
 on:
 workflow_dispatch:
-inputs:
-agent_name:
-description: 'aliselalujp'
-required: true
-default: 'aliselalujp'
-agent_description:
-description: 'aliselalujp'
-required: true
-default: 'aliselalujp AI Agent'
+	inputs:
+	agent_name:
+	description: 'aliselalujp'
+	required: true
+	default: 'aliselalujp'
+	agent_description:
+	description: 'aliselalujp'
+	required: true
+	default: 'aliselalujp AI Agent'
 
 jobs:
 verify:
-runs-on: ubuntu-latest
+	runs-on: ubuntu-latest
 
 steps:
   - name: Checkout repo
@@ -39,3 +39,4 @@ steps:
   - name: Step 3 - Link Human to Agent
     run: |
       node scripts/manualLinkHumanToAgent.js --challenge '{"name": "aliselalujp", "description": "aliselalujp AI Agent"}'
+
