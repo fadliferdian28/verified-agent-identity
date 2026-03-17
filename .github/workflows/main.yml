@@ -39,4 +39,3 @@ steps:
   - name: Step 3 - Link Human to Agent
     run: |
       node scripts/manualLinkHumanToAgent.js --challenge '{"name": "aliselalujp", "description": "aliselalujp AI Agent"}'
-```
